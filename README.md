@@ -46,8 +46,10 @@ Real-time Node (RTN) is core functional node. It provides the core functionality
 Business Node will contain all other business logic. These business logics include user management, payment, system monitoring. Those logics will be package as several individual modules. Each module exposes public APIs to make sure all module could cooperate together. Module could be deployed and attached to the main system flexibly.
 ## 3.	Workflow
 Main business logic: New delivery -> Delivery finish
+![alt text](https://github.com/ZC-Wei/OD3N/blob/master/OD3N_Workflow.png "Workflow")
 
 ## 4.	System Design Topology
+![alt text](https://github.com/ZC-Wei/OD3N/blob/master/OD3N_Topology.png "Topology")
 
 ## 5.	Tech Stack
 - Web Application:      React.js + Node.js
@@ -61,5 +63,3 @@ Main business logic: New delivery -> Delivery finish
 |Current|1.Prototype|a. Basic usable client b. Implement dispatch module b. Fake map modeling d. Achieve main workflow demo|
 |N/A|2.Demonstrable|a. Assignment management b. Tracking system c. Real-world simulation|
 |N/A|3.Advanced|Dynamic navigation and more…|
-
-
