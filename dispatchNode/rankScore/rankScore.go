@@ -9,9 +9,16 @@ import (
 
 //RankScore calculation
 func RankScore(delivery objects.Delivery, carrier objects.Carrier, trafficStatus objects.TrafficStatus) float64 {
+	/*
+		RankScore = ETArrvial + ETAvailable
+		Expected Time Arrvial and Expected Time Available
+		ETArrvial is carrier pending duration for next delivery
+		ETAvailable is carrier travel duration for new delivery departure
+	*/
 	var ETArrvial, ETAvailable float64
 	var distance, deliveryRemain float64
 
+	//Calculation real speed by vechicle theory speed and city traffic congestion degree
 	speed := carrier.Vechicle.Speed * math.Pow(trafficStatus.CongestionDegree, carrier.Vechicle.VechicleType)
 
 	carrierPoint := geo.NewPoint(carrier.Location.Latitude, carrier.Location.Longitude)
