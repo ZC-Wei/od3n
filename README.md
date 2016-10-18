@@ -40,7 +40,9 @@ Server side project contains multiple node. There is a unique node called Contro
 #### 2.2.1.	Control Node
 This unique node is the gateway of whole server side system. It will handle all inbound and outbound traffic. According to the type of request, it would distribute requests to the appropriate functional node, and forward outgoing responses to outside. Meanwhile it’s also responsible for geolocation information update.
 
-##### Dispatch Algorithm
+#### 2.2.2.	Dispatch Node
+Real-time Node (RTN) is core functional node. It provides the core functionality of system—dynamic dispatch. RTN contain delivery request queue and courier pool. For each delivery request, the dispatch algorithm will dynamically calculate the courier scores and rank them. And then chose the courier who has best score, assign the delivery to him. The score will be affect by multiple factors (e.g. delivery priority, courier availability, courier real-time location, vehicle type, road condition). It is also responsible for assignment status monitoring.
+#### Dispatch Algorithm
 For each Delivery:Carrier pair:
 Calculated Rank Score
 Rank Score = Expected Time Available + Expected Time Arrvial
@@ -48,10 +50,9 @@ Expected Time Available = Last Delivery Distance Remain / Real Speed
 Expected Time Arrvial = Distance between Carrier and Delivery Departure / Real Speed
 Real Speed = Vehicle Speed * ( Traffic Congestion Degree ^ Vehicle Type )
 
-#### 2.2.2.	Dispatch Node
-Real-time Node (RTN) is core functional node. It provides the core functionality of system—dynamic dispatch. RTN contain delivery request queue and courier pool. For each delivery request, the dispatch algorithm will dynamically calculate the courier scores and rank them. And then chose the courier who has best score, assign the delivery to him. The score will be affect by multiple factors (e.g. delivery priority, courier availability, courier real-time location, vehicle type, road condition). It is also responsible for assignment status monitoring.
 #### 2.2.3.	Business Node
 Business Node will contain all other business logic. These business logics include user management, payment, system monitoring. Those logics will be package as several individual modules. Each module exposes public APIs to make sure all module could cooperate together. Module could be deployed and attached to the main system flexibly.
+
 ## 3.	Workflow
 Main business logic: New delivery -> Delivery finish
 ![alt text](https://github.com/ZC-Wei/OD3N/blob/master/OD3N_Workflow.png "Workflow")

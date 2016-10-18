@@ -1,5 +1,13 @@
 package dispatch
 
+/*
+	TODO:
+		1. Implement HTTP APIs
+		2. Build Database Cluster
+		3. Scaling
+		4. Avoid single point of failure
+*/
+
 import (
 	"OD3N/dispatchNode/objects"
 	"OD3N/dispatchNode/rankScore"
