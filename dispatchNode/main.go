@@ -9,10 +9,10 @@ package main
 */
 
 import (
-	"OD3N/dispatchNode/dispatch"
-	"OD3N/dispatchNode/objects"
 	"fmt"
 	"log"
+	"od3n/dispatchNode/dispatch"
+	"od3n/dispatchNode/objects"
 	"time"
 
 	"gopkg.in/mgo.v2"

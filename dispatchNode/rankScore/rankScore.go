@@ -1,8 +1,8 @@
 package rankScore
 
 import (
-	"OD3N/dispatchNode/objects"
 	"math"
+	"od3n/dispatchNode/objects"
 
 	"github.com/kellydunn/golang-geo"
 )

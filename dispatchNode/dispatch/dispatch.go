@@ -1,8 +1,8 @@
 package dispatch
 
 import (
-	"OD3N/dispatchNode/objects"
-	"OD3N/dispatchNode/rankScore"
+	"od3n/dispatchNode/objects"
+	"od3n/dispatchNode/rankScore"
 	"time"
 
 	"github.com/satori/go.uuid"
