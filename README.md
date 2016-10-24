@@ -8,6 +8,7 @@ There are three kind of characters in the system—user, courier and customer.
 -	User----publish new deliveries.
 -	Courier----complete deliveries.
 -   Customer----benefit from entire OD3N service.
+
 The project will allow an end user to publish an assignment. The assignment contains a delivery request. The crowd worker will be assigned a proper courier according to his status (e.g. availability, location…) and local road situation. Then system will provide route navigation to the courier to avoid traffic jam and getting lost.
 
 ## 2. Implementation
@@ -55,10 +56,10 @@ Business Node will contain all other business logic. These business logics inclu
 
 ## 3.	Workflow
 Main business logic: New delivery -> Delivery finish
-![alt text](https://github.com/ZC-Wei/OD3N/blob/master/workflow.png "Workflow")
+![alt text](https://github.com/ZC-Wei/od3n/blob/master/workflow.png "Workflow")
 
 ## 4.	System Design Architecture
-![alt text](https://github.com/ZC-Wei/OD3N/blob/master/architecture.png "Achitecture")
+![alt text](https://github.com/ZC-Wei/od3n/blob/master/architecture.png "Achitecture")
 
 ## 5.	Tech Stack
 - Web Application:      React.js + Node.js
