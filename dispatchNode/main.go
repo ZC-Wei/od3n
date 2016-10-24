@@ -37,16 +37,16 @@ func main() {
 	defer session.Close()
 
 	//Get a collection of carriers
-	collection := session.DB("OD3N").C("carriers")
-	var carriers []objects.Carrier
-	err = collection.Find(nil).All(&carriers)
+	collection := session.DB("OD3N").C("couriers")
+	var couriers []objects.Courier
+	err = collection.Find(nil).All(&couriers)
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(carriers)
+	fmt.Println(couriers)
 
 	//Dispatch delivery to best score carrier
-	assignment := dispatch.Dispatch(delivery, carriers, traffic)
+	assignment := dispatch.Dispatch(delivery, couriers, traffic)
 
 	fmt.Println(assignment)
 }

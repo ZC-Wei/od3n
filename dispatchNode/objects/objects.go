@@ -27,8 +27,8 @@ type Vechicle struct {
 	Speed        float64 `bson:"Speed"`
 }
 
-//Carrier object
-type Carrier struct {
+//Courier object
+type Courier struct {
 	_id        bson.ObjectId `bson:"_id,omitempty"`
 	ID         string        `bson:"ID"`
 	Location   Point         `bson:"Location"`
@@ -46,6 +46,6 @@ type TrafficStatus struct {
 type Assignment struct {
 	ID         string    `bson:"ID"`
 	DeliveryID string    `bson:"DeliveryID"`
-	CarrierID  string    `bson:"CarrierID"`
+	CourierID  string    `bson:"CourierID"`
 	TimeStamp  time.Time `bson:"TimeStamp"`
 }

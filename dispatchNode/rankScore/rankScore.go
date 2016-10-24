@@ -8,7 +8,7 @@ import (
 )
 
 //RankScore calculation
-func RankScore(delivery objects.Delivery, carrier objects.Carrier, trafficStatus objects.TrafficStatus) float64 {
+func RankScore(delivery objects.Delivery, courier objects.Courier, trafficStatus objects.TrafficStatus) float64 {
 	/*
 		RankScore = ETArrvial + ETAvailable
 		Expected Time Arrvial and Expected Time Available
@@ -19,16 +19,16 @@ func RankScore(delivery objects.Delivery, carrier objects.Carrier, trafficStatus
 	var distance, deliveryRemain float64
 
 	//Calculation real speed by vechicle theory speed and city traffic congestion degree
-	speed := carrier.Vechicle.Speed * math.Pow(trafficStatus.CongestionDegree, carrier.Vechicle.VechicleType)
+	speed := courier.Vechicle.Speed * math.Pow(trafficStatus.CongestionDegree, courier.Vechicle.VechicleType)
 
-	carrierPoint := geo.NewPoint(carrier.Location.Latitude, carrier.Location.Longitude)
+	courierPoint := geo.NewPoint(courier.Location.Latitude, courier.Location.Longitude)
 	departurePoint := geo.NewPoint(delivery.Departure.Latitude, delivery.Departure.Longitude)
-	distance = carrierPoint.GreatCircleDistance(departurePoint)
+	distance = courierPoint.GreatCircleDistance(departurePoint)
 	ETArrvial = distance / speed
 
-	if carrier.CurrentJob.ID != "NULL" {
-		lastDestinationPoint := geo.NewPoint(carrier.CurrentJob.Destination.Latitude, carrier.CurrentJob.Destination.Longitude)
-		deliveryRemain = carrierPoint.GreatCircleDistance(lastDestinationPoint)
+	if courier.CurrentJob.ID != "NULL" {
+		lastDestinationPoint := geo.NewPoint(courier.CurrentJob.Destination.Latitude, courier.CurrentJob.Destination.Longitude)
+		deliveryRemain = courierPoint.GreatCircleDistance(lastDestinationPoint)
 	} else {
 		deliveryRemain = 0
 	}
