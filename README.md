@@ -1,6 +1,6 @@
-# On-Demand Dynamic Delivery Network (OD3N)
+![alt text](https://github.com/ZC-Wei/od3n/blob/master/logo.png | width=300 "Logo")
 
-![alt text](https://github.com/ZC-Wei/od3n/blob/master/logo.png "Logo")
+On-Demand Dynamic Delivery Network
 
 ## 0.Background
 
