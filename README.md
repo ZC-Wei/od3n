@@ -1,7 +1,7 @@
 <p align="center">
     <img src="https://github.com/ZC-Wei/od3n/blob/master/logo.png" width="600">
-    <p>On-Demand Dynamic Delivery Network</p>
 </p>
+<p align="center">On-Demand Dynamic Delivery Network</p>
 
 ## 0.Background
 
