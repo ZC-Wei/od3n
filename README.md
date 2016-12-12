@@ -1,4 +1,4 @@
-![alt text](https://github.com/ZC-Wei/od3n/blob/master/logo.png =300x "Logo")
+<img src="https://github.com/ZC-Wei/od3n/blob/master/logo.png" width="200">
 
 On-Demand Dynamic Delivery Network
 
