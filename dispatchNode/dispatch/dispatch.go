@@ -9,7 +9,7 @@ import (
 )
 
 //Dispatch method return an assignment
-func Dispatch(delivery objects.Delivery, courierPool []objects.courier, trafficStatus objects.TrafficStatus) objects.Assignment {
+func Dispatch(delivery objects.Delivery, courierPool []objects.Courier, trafficStatus objects.TrafficStatus) objects.Assignment {
 	//Map courierID and RankScore
 	rankMap := make(map[string]float64)
 	for _, value1 := range courierPool {
@@ -26,6 +26,6 @@ func Dispatch(delivery objects.Delivery, courierPool []objects.courier, trafficS
 	}
 	//Create new assignment
 	assignmentID := uuid.NewV4()
-	assignment := objects.Assignment{ID: assignmentID.String(), DeliveryID: delivery.ID, courierID: smallestScoreCourier, TimeStamp: time.Now()}
+	assignment := objects.Assignment{ID: assignmentID.String(), DeliveryID: delivery.ID, CourierID: smallestScoreCourier, TimeStamp: time.Now()}
 	return assignment
 }

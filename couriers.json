@@ -1,0 +1,73 @@
+{
+	"couriers": [
+		{
+			"ID": "c000001",
+			"Location": {
+				"Latitude": 53.318911,
+				"Longitude": -6.272656
+			},
+			"Vechicle": {
+				"VechicleType": 1,
+				"Speed": 15.5
+			},
+			"CurrentJob": {
+				"ID": "NULL",
+				"Departure": {
+					"Latitude": 0,
+					"Longitude": 0
+				},
+				"Destination": {
+					"Latitude": 0,
+					"Longitude": 0
+				},
+				"TimeStamp": "NULL"
+			}
+		},
+		{
+			"ID": "c000002",
+			"Location": {
+				"Latitude": 53.337582,
+				"Longitude": -6.262578
+			},
+			"Vechicle": {
+				"VechicleType": 1,
+				"Speed": 15.5
+			},
+			"CurrentJob": {
+				"ID": "NULL",
+				"Departure": {
+					"Latitude": 0,
+					"Longitude": 0
+				},
+				"Destination": {
+					"Latitude": 0,
+					"Longitude": 0
+				},
+				"TimeStamp": "NULL"
+			}
+		},
+		{
+			"ID": "c000003",
+			"Location": {
+				"Latitude": 53.351543,
+				"Longitude": -6.245471
+			},
+			"Vechicle": {
+				"VechicleType": 1,
+				"Speed": 15.5
+			},
+			"CurrentJob": {
+				"ID": "NULL",
+				"Departure": {
+					"Latitude": 0,
+					"Longitude": 0
+				},
+				"Destination": {
+					"Latitude": 0,
+					"Longitude": 0
+				},
+				"TimeStamp": "NULL"
+			}
+		}
+	]
+}

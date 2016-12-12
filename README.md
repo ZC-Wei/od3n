@@ -1,5 +1,7 @@
 # On-Demand Dynamic Delivery Network (OD3N)
 
+![alt text](https://github.com/ZC-Wei/od3n/blob/master/logo.png "Logo")
+
 ## 0.Background
 
 E-commerce is a very poplar field. It grows rapidly and own an unpredictable marketing potential. However, there is an evident limitation—delivery. An Post could provide basic delivery service, but its user experience is that good and can’t satisfy quick daily business delivery. DHL, UPS, DPD own professional high quality delivery service, but their service cost is very high and inflexible. Almost small and medium business can’t afford to build their own delivery service.
